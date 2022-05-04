@@ -1,0 +1,26 @@
+1, Téma rövdid ismertetése:
+ 
+ Féléves feladatomnak igen közkedvelt tanuló projektet választottam, még pedig
+ a képfeldolgozást. Amelyben két jól párosítható algoritmus került implementálásra és azoknak
+ futási idejét vizsgáltam meg CPU-n illetve GPUn is.
+ Ezen két algoritmus a Gauss szűrő illetve a Sobel éldetektálás, még az egyik algoritmus a kép 
+ elhomályosítását, illetve a zaj csökkentését végzi a másiknak, a képen található objektumok éleinek
+ kiemelésére.
+ Ezeket azért jó párban használni mert az eredeti képeken nagyok sok apró részlet található, amelyek az éldetektálásnál
+ zajként jelentkezhetnek. A homályosítást követően csak a domináns élek maradnak meg, amiket a Sobel féle algoritmus
+ így jobban kiemel.
+ 
+ 
+ 2, Implementálás részletei:
+ 
+ - Feladatomban png képeket dolgoztam fel, amiknek beolvasását illetve később mentését egy külső könyvtár
+ segítségével végeztem el, ez volt a LodePNG.
+ - Továbbá megemlíteném hogy a Gauss szűrőnél a standard 5x5 méretű kernelt használtam
+ -  A különböző implementációkat egy for ciklusban 100 alkalommal le futtatam a kiértékelés érdekében, 
+ majd egy fájlba írattam ezeknek eredményét, amik alapján készítettem a diagrammokat
+
+ 
+ Egy idő után valami overhead jelentkezik minden futtatásnál, azonban egy bizonyos szintre 
+ beáll és nem lesz annál lassabb
+ 
+ 
